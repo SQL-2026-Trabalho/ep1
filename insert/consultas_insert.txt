@@ -1,6 +1,6 @@
 MYSQL:
 
-- INSERT INTO Users (Id, Reputation, CreationDate, DisplayName, LastAccessDate, WebsiteUrl, Location, AboutMe, Views, UpVotes, DownVotes, EmailHash, AccountId) VALUES (10000, 1500, '2010-05-01 14:00:00', 'Enzo', '2010-06-01 10:00:00', 'https://meusite.com', 'São Paulo', 'Estudante de Computação', 150, 20, 2, 'hash123', 999);
+- INSERT INTO Users (Id, Reputation, CreationDate, DisplayName, LastAccessDate, WebsiteUrl, Location, AboutMe, Views, UpVotes, DownVotes, EmailHash, AccountId, Age) VALUES (10000, 1500, '2010-05-01 14:00:00', 'Enzo', '2010-06-01 10:00:00', 'https://meusite.com', 'São Paulo', 'Estudante de Computação', 150, 20, 2, 'hash123', 999, 20);
 
 - INSERT INTO PostTypes (Id, Type) VALUES (9, 'Test');
 
@@ -22,7 +22,7 @@ MYSQL:
 
 PSQL: 
 
-- INSERT INTO "Users" ("Id", "Reputation", "CreationDate", "DisplayName", "LastAccessDate", "WebsiteUrl", "Location", "AboutMe", "Views", "UpVotes", "DownVotes", "EmailHash", "AccountId") VALUES (10000, 1500, '2010-05-01 14:00:00', 'Enzo', '2010-06-01 10:00:00', 'https://meusite.com', 'São Paulo', 'Estudante de Computação', 150, 20, 2, 'hash123', 999);
+- INSERT INTO "Users" ("Id", "Reputation", "CreationDate", "DisplayName", "LastAccessDate", "WebsiteUrl", "Location", "AboutMe", "Views", "UpVotes", "DownVotes", "EmailHash", "AccountId", "Age") VALUES (10000, 1500, '2010-05-01 14:00:00', 'Enzo', '2010-06-01 10:00:00', 'https://meusite.com', 'São Paulo', 'Estudante de Computação', 150, 20, 2, 'hash123', 999, 20);
 
 - INSERT INTO "PostTypes" ("Id", "Type") VALUES (9, 'Test');
 
