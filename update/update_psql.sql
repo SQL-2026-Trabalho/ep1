@@ -23,6 +23,14 @@ UPDATE "Users" SET "LastAccessDate" = CURRENT_TIMESTAMP WHERE "Id" = 10000;
 --  correcao de dados ou troca de e-mail
 UPDATE "Users" SET "CreationDate" = CURRENT_TIMESTAMP, "EmailHash" = '79054025255fb1a26e4bc422aef54eb4', "AccountId" = 1001 WHERE "Id" = 10000;
 
+-- edicao conteudo
+UPDATE "Posts" SET "Title" = 'Como otimizar consultas SQL no PostgreSQL e MySQL?', "Body" = 'Realizando um experimento de projeto', "Tags" = '<sql><postgres><mysql><performance>', "LastEditDate" = CURRENT_TIMESTAMP, "LastEditorDisplayName" = 'Isis Logullo', "LastEditorUserId" = 10000, "LastActivityDate" = CURRENT_TIMESTAMP WHERE "Id" = 1000000;
+-- engajamento
+UPDATE "Posts" SET "Score" = "Score" + 1, "ViewCount" = "ViewCount" + 10, "AnswerCount" = "AnswerCount" + 1, "CommentCount" = "CommentCount" + 2, "FavoriteCount" = "FavoriteCount" + 1, "LastActivityDate" = CURRENT_TIMESTAMP WHERE "Id" = 1000000;
+-- moderacao
+UPDATE "Posts" SET "ClosedDate" = CURRENT_TIMESTAMP, "CommunityOwnedDate" = CURRENT_TIMESTAMP, "AcceptedAnswerId" = 1000001, "PostTypeId" = 1, "LastActivityDate" = CURRENT_TIMESTAMP WHERE "Id" = 1000000;
+-- manutencao
+UPDATE "Posts" SET "CreationDate" = CURRENT_TIMESTAMP, "OwnerUserId" = 10000, "ParentId" = 1000050  WHERE "Id" = 1000000;
 
 
 
