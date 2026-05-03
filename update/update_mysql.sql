@@ -3,7 +3,7 @@ INSERT INTO Users (Id, Reputation, CreationDate, DisplayName, LastAccessDate, We
 INSERT INTO Posts (Id, AcceptedAnswerId, AnswerCount, Body, ClosedDate, CommentCount, CommunityOwnedDate, CreationDate, FavoriteCount, LastActivityDate, LastEditDate, LastEditorDisplayName, LastEditorUserId, OwnerUserId, ParentId, PostTypeId, Score, Tags, Title, ViewCount) VALUES (10000000, 100001, 0, 'Corpo da postagem de teste', CURRENT_TIMESTAMP, 0, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, 0, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, 'Enzo Spinella', 10001, 10001, 100001, 9, 10, '<sql><db>', 'Titulo de Teste', 50);
 INSERT INTO VoteTypes (Id, Name) VALUES (99, 'Tipo Novo 99');
 
-
+-- updates completos
 UPDATE Users SET Reputation = 2000, CreationDate = '2010-05-02 09:00:00', DisplayName = 'Isis', LastAccessDate = CURRENT_TIMESTAMP, WebsiteUrl = 'https://novo-site.com', Location = 'Ubatuba', AboutMe = 'Engenheira de Software', Views = 30, UpVotes = 10, DownVotes = 15, EmailHash = 'hash456', AccountId = 1000, Age = 22 WHERE Id = 10000;
 UPDATE PostTypes SET Type = 'Teste de Performance' WHERE Id = 9;
 UPDATE Badges SET Name = 'Estudante do BCC', UserId = 10001, Date = CURRENT_TIMESTAMP WHERE Id = 100000;
@@ -14,9 +14,9 @@ UPDATE PostLinks SET CreationDate = CURRENT_TIMESTAMP, PostId = 10000000, Relate
 UPDATE VoteTypes SET Name = 'Tipo Voto Atualizado' WHERE Id = 100;
 UPDATE Votes SET PostId = 10000000, VoteTypeId = 99, UserId = 10001, CreationDate = CURRENT_TIMESTAMP, BountyAmount = 50 WHERE Id = 10000000;
 
--- update perfil
+-- atualizacao perfil
 UPDATE Users SET AboutMe = 'Estudante de Ciência da Computação focado em SGBDs.', DisplayName = 'Isis Logullo', Location = 'São Paulo, SP', WebsiteUrl = 'https://github.com', Age = 23 WHERE Id = 10000;
--- update avaliacao
+-- avaliacao
 UPDATE Users SET DownVotes = DownVotes + 1, UpVotes = UpVotes + 5, Views = Views + 1, Reputation = Reputation + 10 WHERE Id = 10000;
 -- atualizacao sessao
 UPDATE Users SET LastAccessDate = CURRENT_TIMESTAMP WHERE Id = 10000;
@@ -31,5 +31,4 @@ UPDATE Posts SET Score = Score + 1, ViewCount = ViewCount + 10, AnswerCount = An
 UPDATE Posts SET ClosedDate = CURRENT_TIMESTAMP, CommunityOwnedDate = CURRENT_TIMESTAMP, AcceptedAnswerId = 1000001, PostTypeId = 1, LastActivityDate = CURRENT_TIMESTAMP WHERE Id = 1000000;
 -- manutencao
 UPDATE Posts SET CreationDate = CURRENT_TIMESTAMP, OwnerUserId = 10000, ParentId = 1000050  WHERE Id = 1000000;
-
 

@@ -14,9 +14,9 @@ UPDATE "PostLinks" SET "CreationDate" = CURRENT_TIMESTAMP, "PostId" = 10000000, 
 UPDATE "VoteTypes" SET "Name" = 'Tipo Voto Atualizado' WHERE "Id" = 100;
 UPDATE "Votes" SET "PostId" = 10000000, "VoteTypeId" = 99, "UserId" = 10001, "CreationDate" = CURRENT_TIMESTAMP, "BountyAmount" = 50 WHERE "Id" = 10000000;
 
--- update perfil
+-- atualizacao perfil
 UPDATE "Users" SET "AboutMe" = 'Estudante de Ciência da Computação focado em SGBDs.', "DisplayName" = 'Isis Logullo', "Location" = 'São Paulo, SP', "WebsiteUrl" = 'https://github.com', "Age" = 23 WHERE "Id" = 10000;
--- update avaliacao
+-- avaliacao
 UPDATE "Users" SET "DownVotes" = "DownVotes" + 1, "UpVotes" = "UpVotes" + 5, "Views" = "Views" + 1, "Reputation" = "Reputation" + 10 WHERE "Id" = 10000;
 -- atualizacao sessao
 UPDATE "Users" SET "LastAccessDate" = CURRENT_TIMESTAMP WHERE "Id" = 10000;
@@ -31,9 +31,5 @@ UPDATE "Posts" SET "Score" = "Score" + 1, "ViewCount" = "ViewCount" + 10, "Answe
 UPDATE "Posts" SET "ClosedDate" = CURRENT_TIMESTAMP, "CommunityOwnedDate" = CURRENT_TIMESTAMP, "AcceptedAnswerId" = 1000001, "PostTypeId" = 1, "LastActivityDate" = CURRENT_TIMESTAMP WHERE "Id" = 1000000;
 -- manutencao
 UPDATE "Posts" SET "CreationDate" = CURRENT_TIMESTAMP, "OwnerUserId" = 10000, "ParentId" = 1000050  WHERE "Id" = 1000000;
-
-
-
-
 
 
