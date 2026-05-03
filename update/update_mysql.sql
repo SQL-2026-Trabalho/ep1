@@ -14,3 +14,23 @@ UPDATE PostLinks SET CreationDate = CURRENT_TIMESTAMP, PostId = 10000000, Relate
 UPDATE VoteTypes SET Name = 'Tipo Voto Atualizado' WHERE Id = 100;
 UPDATE Votes SET PostId = 10000000, VoteTypeId = 99, UserId = 10001, CreationDate = CURRENT_TIMESTAMP, BountyAmount = 50 WHERE Id = 10000000;
 
+-- update perfil
+UPDATE Users SET AboutMe = 'Estudante de Ciência da Computação focado em SGBDs.', DisplayName = 'Isis Logullo', Location = 'São Paulo, SP', WebsiteUrl = 'https://github.com', Age = 23 WHERE Id = 10000;
+-- update avaliacao
+UPDATE Users SET DownVotes = DownVotes + 1, UpVotes = UpVotes + 5, Views = Views + 1, Reputation = Reputation + 10 WHERE Id = 10000;
+-- atualizacao sessao
+UPDATE Users SET LastAccessDate = CURRENT_TIMESTAMP WHERE Id = 10000;
+--  correcao de dados ou troca de e-mail
+UPDATE Users SET CreationDate = CURRENT_TIMESTAMP, EmailHash = '79054025255fb1a26e4bc422aef54eb4', AccountId = 1001 WHERE Id = 10000;
+
+
+
+SELECT * FROM Users WHERE Id = 10000;
+SELECT * FROM PostTypes WHERE Id = 9;
+SELECT * FROM Badges WHERE Id = 100000;
+SELECT * FROM Posts WHERE Id = 1000000;
+SELECT * FROM Comments WHERE Id = 10000000;
+SELECT * FROM LinkTypes WHERE Id = 100;
+SELECT * FROM PostLinks WHERE Id = 100000;
+SELECT * FROM VoteTypes WHERE Id = 100;
+SELECT * FROM Votes WHERE Id = 10000000;

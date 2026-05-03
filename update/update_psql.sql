@@ -3,7 +3,7 @@ INSERT INTO "Users" ("Id", "Reputation", "CreationDate", "DisplayName", "LastAcc
 INSERT INTO "Posts" ("Id", "AcceptedAnswerId", "AnswerCount", "Body", "ClosedDate", "CommentCount", "CommunityOwnedDate", "CreationDate", "FavoriteCount", "LastActivityDate", "LastEditDate", "LastEditorDisplayName", "LastEditorUserId", "OwnerUserId", "ParentId", "PostTypeId", "Score", "Tags", "Title", "ViewCount") VALUES (10000000, 100001, 0, 'Corpo da postagem de teste', CURRENT_TIMESTAMP, 0, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, 0, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, 'Enzo Spinella', 10001, 10001, 100001, 9, 10, '<sql><db>', 'Titulo de Teste', 50);
 INSERT INTO "VoteTypes" ("Id", "Name") VALUES (99, 'Tipo Novo 99');
 
-
+-- updates completos
 UPDATE "Users" SET "Reputation" = 2000, "CreationDate" = '2010-05-02 09:00:00', "DisplayName" = 'Isis', "LastAccessDate" = CURRENT_TIMESTAMP, "WebsiteUrl" = 'https://novo-site.com', "Location" = 'Ubatuba', "AboutMe" = 'Engenheira de Software', "Views" = 30, "UpVotes" = 10, "DownVotes" = 15, "EmailHash" = 'hash456', "AccountId" = 1000, "Age" = 22 WHERE "Id" = 10000;
 UPDATE "PostTypes" SET "Type" = 'Teste de Performance' WHERE "Id" = 9;
 UPDATE "Badges" SET "Name" = 'Estudante do BCC', "UserId" = 10001, "Date" = CURRENT_TIMESTAMP WHERE "Id" = 100000;
@@ -13,6 +13,19 @@ UPDATE "LinkTypes" SET "Type" = 'Tipo de Link Atualizado' WHERE "Id" = 100;
 UPDATE "PostLinks" SET "CreationDate" = CURRENT_TIMESTAMP, "PostId" = 10000000, "RelatedPostId" = 10000000, "LinkTypeId" = 3 WHERE "Id" = 100000;
 UPDATE "VoteTypes" SET "Name" = 'Tipo Voto Atualizado' WHERE "Id" = 100;
 UPDATE "Votes" SET "PostId" = 10000000, "VoteTypeId" = 99, "UserId" = 10001, "CreationDate" = CURRENT_TIMESTAMP, "BountyAmount" = 50 WHERE "Id" = 10000000;
+
+-- update perfil
+UPDATE "Users" SET "AboutMe" = 'Estudante de Ciência da Computação focado em SGBDs.', "DisplayName" = 'Isis Logullo', "Location" = 'São Paulo, SP', "WebsiteUrl" = 'https://github.com', "Age" = 23 WHERE "Id" = 10000;
+-- update avaliacao
+UPDATE "Users" SET "DownVotes" = "DownVotes" + 1, "UpVotes" = "UpVotes" + 5, "Views" = "Views" + 1, "Reputation" = "Reputation" + 10 WHERE "Id" = 10000;
+-- atualizacao sessao
+UPDATE "Users" SET "LastAccessDate" = CURRENT_TIMESTAMP WHERE "Id" = 10000;
+--  correcao de dados ou troca de e-mail
+UPDATE "Users" SET "CreationDate" = CURRENT_TIMESTAMP, "EmailHash" = '79054025255fb1a26e4bc422aef54eb4', "AccountId" = 1001 WHERE "Id" = 10000;
+
+
+
+
 
 
 
