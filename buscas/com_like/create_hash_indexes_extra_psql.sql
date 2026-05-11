@@ -1,0 +1,10 @@
+-- Hash indexes nao ideais para com_like (PostgreSQL)
+CREATE INDEX idx_users_id_hash_extra ON "Users" USING HASH ("Id");
+CREATE INDEX idx_posts_id_hash_extra ON "Posts" USING HASH ("Id");
+CREATE INDEX idx_badges_id_hash_extra ON "Badges" USING HASH ("Id");
+CREATE INDEX idx_comments_id_hash_extra ON "Comments" USING HASH ("Id");
+CREATE INDEX idx_posttypes_id_hash_extra ON "PostTypes" USING HASH ("Id");
+CREATE INDEX idx_linktypes_id_hash_extra ON "LinkTypes" USING HASH ("Id");
+CREATE INDEX idx_postlinks_id_hash_extra ON "PostLinks" USING HASH ("Id");
+CREATE INDEX idx_votetypes_id_hash_extra ON "VoteTypes" USING HASH ("Id");
+CREATE INDEX idx_votes_id_hash_extra ON "Votes" USING HASH ("Id");

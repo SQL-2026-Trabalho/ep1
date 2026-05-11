@@ -1,0 +1,10 @@
+-- Hash indexes nao ideais para chave-primaria_faixa_chaves_primarias (PostgreSQL)
+CREATE INDEX idx_users_id_hash_extra2 ON "Users" USING HASH ("DisplayName");
+CREATE INDEX idx_posttypes_id_hash_extra2 ON "PostTypes" USING HASH ("Type");
+CREATE INDEX idx_badges_id_hash_extra2 ON "Badges" USING HASH ("Name");
+CREATE INDEX idx_posts_id_hash_extra2 ON "Posts" USING HASH ("Title");
+CREATE INDEX idx_comments_id_hash_extra2 ON "Comments" USING HASH ("Text");
+CREATE INDEX idx_linktypes_id_hash_extra2 ON "LinkTypes" USING HASH ("Type");
+CREATE INDEX idx_postlinks_id_hash_extra2 ON "PostLinks" USING HASH ("CreationDate");
+CREATE INDEX idx_votetypes_id_hash_extra2 ON "VoteTypes" USING HASH ("Name");
+CREATE INDEX idx_votes_id_hash_extra2 ON "Votes" USING HASH ("CreationDate");

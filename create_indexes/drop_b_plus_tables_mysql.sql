@@ -1,0 +1,9 @@
+DROP TABLE IF EXISTS usuarios_b_plus;
+DROP TABLE IF EXISTS posts_b_plus;
+DROP TABLE IF EXISTS badges_b_plus;
+DROP TABLE IF EXISTS comments_b_plus;
+DROP TABLE IF EXISTS posttypes_b_plus;
+DROP TABLE IF EXISTS linktypes_b_plus;
+DROP TABLE IF EXISTS postlinks_b_plus;
+DROP TABLE IF EXISTS votetypes_b_plus;
+DROP TABLE IF EXISTS votes_b_plus;

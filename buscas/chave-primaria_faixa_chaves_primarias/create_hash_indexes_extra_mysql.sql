@@ -1,0 +1,10 @@
+-- Hash indexes nao ideais para chave-primaria_faixa_chaves_primarias (MySQL)
+CREATE INDEX idx_users_id_hash_extra2 ON Users (DisplayName) USING HASH;
+CREATE INDEX idx_posttypes_id_hash_extra2 ON PostTypes (Type) USING HASH;
+CREATE INDEX idx_badges_id_hash_extra2 ON Badges (Name) USING HASH;
+CREATE INDEX idx_posts_id_hash_extra2 ON Posts (Title) USING HASH;
+CREATE INDEX idx_comments_id_hash_extra2 ON Comments (Text) USING HASH;
+CREATE INDEX idx_linktypes_id_hash_extra2 ON LinkTypes (Type) USING HASH;
+CREATE INDEX idx_postlinks_id_hash_extra2 ON PostLinks (CreationDate) USING HASH;
+CREATE INDEX idx_votetypes_id_hash_extra2 ON VoteTypes (Name) USING HASH;
+CREATE INDEX idx_votes_id_hash_extra2 ON Votes (CreationDate) USING HASH;

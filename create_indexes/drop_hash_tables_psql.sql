@@ -1,0 +1,9 @@
+DROP TABLE IF EXISTS usuarios_hash;
+DROP TABLE IF EXISTS posts_hash;
+DROP TABLE IF EXISTS badges_hash;
+DROP TABLE IF EXISTS comments_hash;
+DROP TABLE IF EXISTS posttypes_hash;
+DROP TABLE IF EXISTS linktypes_hash;
+DROP TABLE IF EXISTS postlinks_hash;
+DROP TABLE IF EXISTS votetypes_hash;
+DROP TABLE IF EXISTS votes_hash;
