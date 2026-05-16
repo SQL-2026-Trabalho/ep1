@@ -1,0 +1,11 @@
+DROP INDEX idx_posts_owner_btree ON Posts;
+DROP INDEX idx_posts_posttype_btree ON Posts;
+DROP INDEX idx_posts_parent_btree ON Posts;
+DROP INDEX idx_votes_votetype_btree ON Votes;
+DROP INDEX idx_votes_post_btree ON Votes;
+DROP INDEX idx_comments_user_btree ON Comments;
+DROP INDEX idx_comments_score_btree ON Comments;
+DROP INDEX idx_badges_user_btree ON Badges;
+DROP INDEX idx_badges_name_btree ON Badges;
+DROP INDEX idx_postlinks_post_btree ON PostLinks;
+DROP INDEX idx_postlinks_linktype_btree ON PostLinks;

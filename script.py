@@ -10,7 +10,7 @@ PSQL_PASSWORD = "postgres"
 PSQL_HOST = "localhost"
 MYSQL_USER = "root"
 MYSQL_PASSWORD = "mysql"
-RUN_COUNTS = [1]#, 2, 5, 10, 20, 45]
+RUN_COUNTS = [1, 2, 5, 10, 20]
 
 
 
@@ -89,14 +89,14 @@ class CsvRecorder:
 
 def test_dml(label, setup_psql, setup_mysql, run_psql, run_mysql, teardown_psql, teardown_mysql, runs, recorder):
     for _ in range(runs):
-        run_psql_query(setup_psql)
-        run_psql_query(run_psql, measure=True, label=f"{label}_PostgreSQL", recorder=recorder)
+        #run_psql_query(setup_psql)
+        #run_psql_query(run_psql, measure=True, label=f"{label}_PostgreSQL", recorder=recorder)
 
-        #run_mysql_query(setup_mysql)
-#        run_mysql_query(run_mysql, measure=True, label=f"{label}_MySQL", recorder=recorder)
+        run_mysql_query(setup_mysql)
+        run_mysql_query(run_mysql, measure=True, label=f"{label}_MySQL", recorder=recorder)
 
-    run_psql_query(teardown_psql)
-    #run_mysql_query(teardown_mysql)
+    #run_psql_query(teardown_psql)
+    run_mysql_query(teardown_mysql)
 
 
 def test_delete(runs, recorder):
@@ -143,22 +143,19 @@ def test_insert(runs, recorder):
 
 
 def run_busca(label, psql_path, mysql_path, recorder):
-    run_psql_query(psql_path, measure=True, label=f"{label}_PostgreSQL", recorder=recorder)
-    #run_mysql_query(mysql_path, measure=True, label=f"{label}_MySQL", recorder=recorder)
+    #run_psql_query(psql_path, measure=True, label=f"{label}_PostgreSQL", recorder=recorder)
+    run_mysql_query(mysql_path, measure=True, label=f"{label}_MySQL", recorder=recorder)
 
 
 def run_busca_com_index(label, index_type, create_psql, create_mysql, query_psql, query_mysql, runs, recorder):
-    run_psql_query(create_psql, measure=False, label=f"{label}_PostgreSQL", recorder=recorder)
-    #run_mysql_query(create_mysql, measure=False, label=f"{label}_MySQL", recorder=recorder)
+    #run_psql_query(create_psql, measure=False, label=f"{label}_PostgreSQL", recorder=recorder)
+    run_mysql_query(create_mysql, measure=False, label=f"{label}_MySQL", recorder=recorder)
     for _ in range(runs):
       run_busca(label, query_psql, query_mysql, recorder)
 
-    if index_type == "hash":
-        run_psql_query("create_indexes/drop_hash_tables_psql.sql")
-        #run_mysql_query("create_indexes/drop_hash_tables_mysql.sql")
-    elif index_type == "b_plus":
-        run_psql_query("create_indexes/drop_b_plus_tables_psql.sql")
-        #run_mysql_query("create_indexes/drop_b_plus_tables_mysql.sql")
+    drop_mysql = create_mysql.replace("create_", "drop_")
+    if os.path.exists(drop_mysql) and os.path.getsize(drop_mysql) > 0:
+        run_mysql_query(drop_mysql)
 
 
 
@@ -400,7 +397,7 @@ def main():
         test_busca_com_subconsultas(runs, recorder)
         test_busca_juncoes(runs, recorder)
         test_busca_nao_chave_primarias(runs, recorder)
-        tedst_busca_agrupamentos(runs, recorder)
+        test_busca_agrupamentos(runs, recorder)
 
 
 if __name__ == "__main__":

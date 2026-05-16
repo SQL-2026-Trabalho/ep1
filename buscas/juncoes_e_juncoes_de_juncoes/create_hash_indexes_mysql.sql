@@ -6,6 +6,6 @@ CREATE INDEX idx_votes_votetype_hash ON Votes (VoteTypeId) USING HASH;
 CREATE INDEX idx_votes_post_hash ON Votes (PostId) USING HASH;
 CREATE INDEX idx_comments_user_hash ON Comments (UserId) USING HASH;
 CREATE INDEX idx_badges_user_hash ON Badges (UserId) USING HASH;
-CREATE INDEX idx_badges_name_hash ON Badges (Name) USING HASH;
+CREATE INDEX idx_badges_name_hash ON Badges (Name(255)) USING HASH;
 CREATE INDEX idx_postlinks_post_hash ON PostLinks (PostId) USING HASH;
 CREATE INDEX idx_postlinks_linktype_hash ON PostLinks (LinkTypeId) USING HASH;

@@ -1,0 +1,10 @@
+DROP INDEX idx_posts_owner_hash ON Posts;
+DROP INDEX idx_posts_posttype_hash ON Posts;
+DROP INDEX idx_posts_parent_hash ON Posts;
+DROP INDEX idx_votes_votetype_hash ON Votes;
+DROP INDEX idx_votes_post_hash ON Votes;
+DROP INDEX idx_comments_user_hash ON Comments;
+DROP INDEX idx_badges_user_hash ON Badges;
+DROP INDEX idx_badges_name_hash ON Badges;
+DROP INDEX idx_postlinks_post_hash ON PostLinks;
+DROP INDEX idx_postlinks_linktype_hash ON PostLinks;

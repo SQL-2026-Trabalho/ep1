@@ -1,0 +1,9 @@
+DROP INDEX idx_users_id_hash ON Users;
+DROP INDEX idx_posttypes_id_hash ON PostTypes;
+DROP INDEX idx_badges_id_hash ON Badges;
+DROP INDEX idx_posts_id_hash ON Posts;
+DROP INDEX idx_comments_id_hash ON Comments;
+DROP INDEX idx_linktypes_id_hash ON LinkTypes;
+DROP INDEX idx_postlinks_id_hash ON PostLinks;
+DROP INDEX idx_votetypes_id_hash ON VoteTypes;
+DROP INDEX idx_votes_id_hash ON Votes;
