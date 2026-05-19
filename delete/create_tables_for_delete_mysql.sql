@@ -8,6 +8,17 @@ CREATE TABLE IF NOT EXISTS postlinks_for_delete AS SELECT * FROM PostLinks WHERE
 CREATE TABLE IF NOT EXISTS votetypes_for_delete AS SELECT * FROM VoteTypes WHERE 1=0;
 CREATE TABLE IF NOT EXISTS votes_for_delete AS SELECT * FROM Votes WHERE 1=0;
 
+-- Garante que a tabela está vazia se já existir no loop
+TRUNCATE TABLE users_for_delete;
+TRUNCATE TABLE posts_for_delete;
+TRUNCATE TABLE badges_for_delete;
+TRUNCATE TABLE comments_for_delete;
+TRUNCATE TABLE posttypes_for_delete;
+TRUNCATE TABLE linktypes_for_delete;
+TRUNCATE TABLE postlinks_for_delete;
+TRUNCATE TABLE votetypes_for_delete;
+TRUNCATE TABLE votes_for_delete;
+
 INSERT IGNORE INTO users_for_delete SELECT * FROM Users;
 INSERT IGNORE INTO posts_for_delete SELECT * FROM Posts;
 INSERT IGNORE INTO badges_for_delete SELECT * FROM Badges;

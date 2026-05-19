@@ -1,4 +1,4 @@
-CREATE TABLE IF NOT EXISTS usuarios_for_update AS SELECT * FROM Users WHERE 1=0;
+CREATE TABLE IF NOT EXISTS users_for_update AS SELECT * FROM Users WHERE 1=0;
 CREATE TABLE IF NOT EXISTS posts_for_update AS SELECT * FROM Posts WHERE 1=0;
 CREATE TABLE IF NOT EXISTS badges_for_update AS SELECT * FROM Badges WHERE 1=0;
 CREATE TABLE IF NOT EXISTS comments_for_update AS SELECT * FROM Comments WHERE 1=0;
@@ -8,7 +8,18 @@ CREATE TABLE IF NOT EXISTS postlinks_for_update AS SELECT * FROM PostLinks WHERE
 CREATE TABLE IF NOT EXISTS votetypes_for_update AS SELECT * FROM VoteTypes WHERE 1=0;
 CREATE TABLE IF NOT EXISTS votes_for_update AS SELECT * FROM Votes WHERE 1=0;
 
-INSERT IGNORE INTO usuarios_for_update SELECT * FROM Users;
+-- Garante limpeza total em cada nova rodada de medição
+TRUNCATE TABLE users_for_update;
+TRUNCATE TABLE posts_for_update;
+TRUNCATE TABLE badges_for_update;
+TRUNCATE TABLE comments_for_update;
+TRUNCATE TABLE posttypes_for_update;
+TRUNCATE TABLE linktypes_for_update;
+TRUNCATE TABLE postlinks_for_update;
+TRUNCATE TABLE votetypes_for_update;
+TRUNCATE TABLE votes_for_update;
+
+INSERT IGNORE INTO users_for_update SELECT * FROM Users;
 INSERT IGNORE INTO posts_for_update SELECT * FROM Posts;
 INSERT IGNORE INTO badges_for_update SELECT * FROM Badges;
 INSERT IGNORE INTO comments_for_update SELECT * FROM Comments;

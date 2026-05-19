@@ -1,4 +1,4 @@
-DROP TABLE IF EXISTS usuarios_for_delete;
+DROP TABLE IF EXISTS users_for_delete;
 DROP TABLE IF EXISTS posts_for_delete;
 DROP TABLE IF EXISTS badges_for_delete;
 DROP TABLE IF EXISTS comments_for_delete;
