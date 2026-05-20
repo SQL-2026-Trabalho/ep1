@@ -1,4 +1,4 @@
-DROP TABLE IF EXISTS usuarios_for_update;
+DROP TABLE IF EXISTS users_for_update;
 DROP TABLE IF EXISTS posts_for_update;
 DROP TABLE IF EXISTS badges_for_update;
 DROP TABLE IF EXISTS comments_for_update;
