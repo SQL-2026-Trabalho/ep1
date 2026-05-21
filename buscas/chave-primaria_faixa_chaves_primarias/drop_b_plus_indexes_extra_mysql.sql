@@ -1,0 +1,9 @@
+DROP INDEX idx_users_id_btree_extra2 ON Users;
+DROP INDEX idx_posttypes_id_btree_extra2 ON PostTypes;
+DROP INDEX idx_badges_id_btree_extra2 ON Badges;
+DROP INDEX idx_posts_id_btree_extra2 ON Posts;
+DROP INDEX idx_comments_id_btree_extra2 ON Comments;
+DROP INDEX idx_linktypes_id_btree_extra2 ON LinkTypes;
+DROP INDEX idx_postlinks_id_btree_extra2 ON PostLinks;
+DROP INDEX idx_votetypes_id_btree_extra2 ON VoteTypes;
+DROP INDEX idx_votes_id_btree_extra2 ON Votes;

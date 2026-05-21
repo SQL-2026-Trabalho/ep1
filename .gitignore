@@ -1,2 +1,5 @@
 comandos_uteis.txt
 .venv_gdown
+*.zip
+logs
+.evn

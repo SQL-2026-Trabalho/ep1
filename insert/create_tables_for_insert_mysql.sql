@@ -1,0 +1,19 @@
+CREATE TABLE IF NOT EXISTS users_for_insert AS SELECT * FROM Users WHERE 1=0;
+CREATE TABLE IF NOT EXISTS posts_for_insert AS SELECT * FROM Posts WHERE 1=0;
+CREATE TABLE IF NOT EXISTS badges_for_insert AS SELECT * FROM Badges WHERE 1=0;
+CREATE TABLE IF NOT EXISTS comments_for_insert AS SELECT * FROM Comments WHERE 1=0;
+CREATE TABLE IF NOT EXISTS post_types_for_insert AS SELECT * FROM PostTypes WHERE 1=0;
+CREATE TABLE IF NOT EXISTS link_types_for_insert AS SELECT * FROM LinkTypes WHERE 1=0;
+CREATE TABLE IF NOT EXISTS post_links_for_insert AS SELECT * FROM PostLinks WHERE 1=0;
+CREATE TABLE IF NOT EXISTS vote_types_for_insert AS SELECT * FROM VoteTypes WHERE 1=0;
+CREATE TABLE IF NOT EXISTS votes_for_insert AS SELECT * FROM Votes WHERE 1=0;
+
+DELETE FROM votes_for_insert WHERE Id = 10000000;
+DELETE FROM post_links_for_insert WHERE Id = 100000;
+DELETE FROM comments_for_insert WHERE Id = 10000000;
+DELETE FROM badges_for_insert WHERE Id = 100000;
+DELETE FROM posts_for_insert WHERE Id = 1000000;
+DELETE FROM users_for_insert WHERE Id = 10000;
+DELETE FROM post_types_for_insert WHERE Id = 9;
+DELETE FROM link_types_for_insert WHERE Id = 100;
+DELETE FROM vote_types_for_insert WHERE Id = 100;

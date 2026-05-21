@@ -1,0 +1,2 @@
+-- B+ tree indexes for chave-primaria_faixa_chaves_primarias (MySQL)
+-- As colunas Id ja sao chave primaria, portanto ja possuem B+ tree.

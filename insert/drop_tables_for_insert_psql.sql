@@ -1,0 +1,9 @@
+DROP TABLE IF EXISTS users_for_insert;
+DROP TABLE IF EXISTS posts_for_insert;
+DROP TABLE IF EXISTS badges_for_insert;
+DROP TABLE IF EXISTS comments_for_insert;
+DROP TABLE IF EXISTS post_types_for_insert;
+DROP TABLE IF EXISTS link_types_for_insert;
+DROP TABLE IF EXISTS post_links_for_insert;
+DROP TABLE IF EXISTS vote_types_for_insert;
+DROP TABLE IF EXISTS votes_for_insert;

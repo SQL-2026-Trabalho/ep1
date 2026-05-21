@@ -1,0 +1,9 @@
+DROP TABLE IF EXISTS users_for_delete;
+DROP TABLE IF EXISTS posts_for_delete;
+DROP TABLE IF EXISTS badges_for_delete;
+DROP TABLE IF EXISTS comments_for_delete;
+DROP TABLE IF EXISTS posttypes_for_delete;
+DROP TABLE IF EXISTS linktypes_for_delete;
+DROP TABLE IF EXISTS postlinks_for_delete;
+DROP TABLE IF EXISTS votetypes_for_delete;
+DROP TABLE IF EXISTS votes_for_delete;

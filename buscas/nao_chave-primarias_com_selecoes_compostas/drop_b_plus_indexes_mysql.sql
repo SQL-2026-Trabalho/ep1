@@ -1,0 +1,11 @@
+DROP INDEX idx_users_location_rep_btree ON Users;
+DROP INDEX idx_users_lastaccess_views_btree ON Users;
+DROP INDEX idx_posts_score_answer_btree ON Posts;
+DROP INDEX idx_posts_creationdate_btree ON Posts;
+DROP INDEX idx_badges_name_date_btree ON Badges;
+DROP INDEX idx_comments_user_score_btree ON Comments;
+DROP INDEX idx_votes_type_bounty_btree ON Votes;
+DROP INDEX idx_postlinks_type_date_btree ON PostLinks;
+DROP INDEX idx_posttypes_type_btree ON PostTypes;
+DROP INDEX idx_votetypes_name_btree ON VoteTypes;
+DROP INDEX idx_linktypes_type_btree ON LinkTypes;
