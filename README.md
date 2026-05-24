@@ -1,6 +1,6 @@
 # EP1 SQL - Análise de Desempenho de Bancos de Dados
 
-Grupo:
+## 👥 Grupo
 
 - Enzo Furegatti Spinella 14568198 
 - Ísis Ardisson Logullo 7577410 
