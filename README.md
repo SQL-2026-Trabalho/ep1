@@ -1,5 +1,11 @@
 # EP1 SQL - Análise de Desempenho de Bancos de Dados
 
+Grupo:
+Enzo Furegatti Spinella 14568198 
+Ísis Ardisson Logullo 7577410 
+Luiz Fernando de Freitas Fernandes 13671678
+Matheus Rodrigues da Silva Espalaor 14598615
+
 ## 📋 Visão Geral
 
 Este repositório implementa um estudo comparativo de desempenho entre **PostgreSQL** e **MySQL** utilizando o banco de dados **StackOverflow**. O projeto avalia diferentes tipos de operações SQL e índices para entender como cada banco de dados responde a distintas estratégias de otimização.
@@ -104,9 +110,6 @@ Os resultados são salvos em `results/`:
 
 Após executar o script, use o Jupyter Notebook para visualizar e analisar os resultados.
 
-Os arquivos result/postgree/estatisticas_consultas_postgresql.csv e results/mysql/estatisticas_consultas_mysql.csv devem ser salvos no Drive e sincronizado com seu Jupyter Notebook para funcionar.
-
-
 ```bash
 jupyter notebook gera_graficos.ipynb
 ```
@@ -127,9 +130,11 @@ jupyter notebook gera_graficos.ipynb
 
 #### Como usar:
 1. Abra o notebook no Jupyter
-2. Execute as células sequencialmente (Shift+Enter)
-3. Visualize os gráficos gerados
-4. Customize as análises conforme necessário
+2. Salve os arquivos result/postgree/estatisticas_consultas_postgresql.csv e results/mysql/estatisticas_consultas_mysql.csv no Drive e sincronize com seu Jupyter Notebook para funcionar.
+3. Edite o caminho dos arquivos do Drive no arquivo gera_graficos.ipynb
+4. Execute as células sequencialmente (Shift+Enter)
+5. Visualize os gráficos gerados
+6. Customize as análises conforme necessário
 
 ## ⚙️ Configuração de Variáveis
 
