@@ -1,10 +1,11 @@
 # EP1 SQL - Análise de Desempenho de Bancos de Dados
 
 Grupo:
-Enzo Furegatti Spinella 14568198 
-Ísis Ardisson Logullo 7577410 
-Luiz Fernando de Freitas Fernandes 13671678
-Matheus Rodrigues da Silva Espalaor 14598615
+
+- Enzo Furegatti Spinella 14568198 
+- Ísis Ardisson Logullo 7577410 
+- Luiz Fernando de Freitas Fernandes 13671678
+- Matheus Rodrigues da Silva Espalaor 14598615
 
 ## 📋 Visão Geral
 
