@@ -5,7 +5,7 @@
 Este repositório implementa um estudo comparativo de desempenho entre **PostgreSQL** e **MySQL** utilizando o banco de dados **StackOverflow**. O projeto avalia diferentes tipos de operações SQL e índices para entender como cada banco de dados responde a distintas estratégias de otimização.
 
 ## 🏗️ Estrutura do Repositório
-
+````
 ep1/
 ├── script.py                 # Script principal que executa os testes
 ├── init_zip.sh              # Script de inicialização
@@ -26,7 +26,7 @@ ep1/
     ├── postgree/            # Resultados dos testes PostgreSQL (CSV com métricas de tempo e RAM)
     ├── graficos_tempo/      # Gráficos gerados de comparação de tempo de execução
     └── graficos_ram/        # Gráficos gerados de comparação de uso de RAM
-    
+````
 
 ## 🔧 Pré-requisitos
 
